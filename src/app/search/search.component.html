@@ -1,0 +1,15 @@
+<div class="input-group mb-3 search-div">
+  <input
+    type="text"
+    class="form-control"
+    placeholder="Search"
+    aria-label="Search"
+    aria-describedby="search-button"
+    [(ngModel)]="searchValue"
+  />
+  <button class="btn btn-primary" type="button" id="search-button" 
+  (click) = "onSearchValueEntered()"
+    >
+    Search
+  </button>
+</div>

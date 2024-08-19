@@ -1,0 +1,28 @@
+<div class="dashboard">
+  <h1>{{ title }}</h1>
+  
+  <div class="stats">
+    <div class="stat-card" *ngFor="let stat of statistics">
+      <h3>{{ stat.label }}</h3>
+      <p>{{ stat.value }}</p>
+    </div>
+  </div>
+  <div class="actions">
+    <a href="/add-room" class="btn">Add New Room</a>
+    <a href="/manage-bookings" class="btn">Manage Bookings</a>
+    <a href="/view-reports" class="btn">View Reports</a>
+    <a href="/manage-users" class="btn">Manage Users</a>
+  </div>
+  <section class="charts">
+      <!-- Placeholder for charts -->
+      <div class="chart">
+          <h3>Booking Statistics</h3>
+          <!-- Add chart library or image here -->
+          <app-booking-chart />
+      </div>
+      <div class="chart">
+          <h3>Revenue</h3>
+          <app-revenue-chart />
+      </div>
+  </section>
+</div>

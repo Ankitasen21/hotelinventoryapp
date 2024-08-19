@@ -1,0 +1,36 @@
+/* Set the width of the dialog */
+.mat-dialog-container {
+  width: 700px;
+  border-radius: 8px;
+  padding: 16px;
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+/* Style the dialog title */
+.mat-dialog-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 16px;
+  color: #721c24;
+}
+
+/* Style the dialog content */
+.mat-dialog-content {
+  font-size: 18px;
+}
+
+/* Style the actions (buttons) */
+.mat-dialog-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 24px;
+}
+
+/* Make sure the dialog is centered */
+.cdk-global-overlay-wrapper, .cdk-overlay-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+

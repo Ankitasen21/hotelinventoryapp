@@ -1,0 +1,82 @@
+.dashboard {
+    text-align: center;
+    padding: 2rem;
+    background: linear-gradient(120deg, #e8e8e8, #aeaeae86);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+.dashboard h1 {
+    font-size: 2.5rem;
+    color: #444;
+    margin-bottom: 1.5rem;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 2rem;
+}
+
+.stat-card {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 30%;
+}
+
+.stat-card h3 {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.stat-card p {
+    font-size: 1.5rem;
+    color: #666;
+    margin: 0;
+}
+
+.actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: space-around;
+}
+
+.actions .btn {
+    background: #0055ff;
+    color: #fff;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: background 0.3s;
+}
+
+.actions .btn:hover {
+    background: #002459;
+    color: #fff;
+}
+
+.charts {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.chart {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 1rem 0;
+}
+
+.chart h3{
+    font-size: 1.2rem;
+}
+

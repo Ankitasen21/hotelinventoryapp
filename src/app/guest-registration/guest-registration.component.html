@@ -1,0 +1,49 @@
+<div class="registration-container min-vh-100">
+    <h1>Guest Registration</h1>
+    <form [formGroup]="registrationForm" (ngSubmit)="register()">
+      <div class="form-group">
+        <label for="firstName">First Name</label>
+        <input id="firstName" formControlName="firstName" type="text" class="form-control" />
+        <div *ngIf="registrationForm.get('firstName')?.invalid && registrationForm.get('firstName')?.touched" class="error">
+          First name is required and should be a maximum of 50 characters.
+        </div>
+      </div>
+  
+      <div class="form-group">
+        <label for="lastName">Last Name</label>
+        <input id="lastName" formControlName="lastName" type="text" class="form-control" />
+        <div *ngIf="registrationForm.get('lastName')?.invalid && registrationForm.get('lastName')?.touched" class="error">
+          Last name is required and should be a maximum of 50 characters.
+        </div>
+      </div>
+  
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input id="email" formControlName="email" type="email" class="form-control" />
+        <div *ngIf="registrationForm.get('email')?.invalid && registrationForm.get('email')?.touched" class="error">
+          A valid email address is required.
+        </div>
+      </div>
+  
+      <div class="form-group">
+        <label for="phoneNumber">Phone Number</label>
+        <input id="phoneNumber" formControlName="phoneNumber" type="text" class="form-control" />
+        <div *ngIf="registrationForm.get('phoneNumber')?.invalid && registrationForm.get('phoneNumber')?.touched" class="error">
+          Phone number should be between 10 to 15 digits.
+        </div>
+      </div>
+  
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input id="password" formControlName="password" type="password" class="form-control" />
+        <div *ngIf="registrationForm.get('password')?.invalid && registrationForm.get('password')?.touched" class="error">
+          Password is required and should be at least 6 characters long.
+        </div>
+      </div>
+  
+      <button type="submit" class="btn btn-primary" [disabled]="registrationForm.invalid">Register</button>
+  
+      <div *ngIf="registrationError" class="error">{{ registrationError }}</div>
+    </form>
+  </div>
+  

@@ -1,0 +1,73 @@
+.table-wrapper {
+  width: 100%;
+  margin: 0 auto; /* Center the table wrapper */
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 auto;
+}
+
+.table tr{
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.table th, .table td {
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+  white-space: wrap;
+}
+
+.table th {
+  background-color: #f4f4f4;
+}
+
+/* Extra Small Devices (Phones, 0px to 575px) */
+@media (max-width: 575px) {
+  .table th, .table td {
+    display: block;
+    width: 100%;
+    text-align: left;
+    box-sizing: border-box;
+  }
+
+  .table {
+    display: block;
+    overflow: auto;
+    white-space: wrap;
+  }
+
+}
+
+/* Small Devices (Tablets, 576px to 767px) */
+@media (min-width: 576px) and (max-width: 767px) {
+  .table th, .table td {
+    text-align: left;
+    box-sizing: border-box;
+    padding-left: 1%;
+  }
+
+}
+
+/* Medium Devices (Tablets, 768px to 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+  .table th, .table td {
+    text-align: left;
+    box-sizing: border-box;
+  }
+
+}
+
+/* Large Devices (Desktops, 992px and above) */
+@media (min-width: 992px) {
+  .table th, .table td {
+    text-align: center;
+    padding-left: 0;
+    box-sizing: border-box;
+  }
+
+  .table {
+    table-layout: auto;
+  }
+}

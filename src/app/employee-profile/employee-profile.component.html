@@ -1,0 +1,86 @@
+<div class="profile-card min-vh-100">
+  <div class="col">
+    <h2 class="h2">Employee Details</h2>
+    <div class="profile-header">
+      <div class="profile-img">
+        <img [src]="employee.profile_photo" alt="Profile Image" />
+      </div>
+      <h2>{{ employee.username }} 
+        <span> 
+          <button
+            type="button"
+            class="btn"
+            [ngClass]="{
+              'btn-outline-success': employee.Status === 'Active',
+              'btn-outline-danger': employee.Status === 'Inactive'
+            }"
+            data-bs-toggle="tooltip"
+            data-bs-placement="top"
+            title="Tooltip on top"
+            style="border-color: transparent"
+          >
+            <i
+              [ngClass]="{
+                'bi bi-wifi': employee.Status === 'Active',
+                'bi bi-wifi-off': employee.Status === 'Inactive'
+              }"
+              style="color: green"
+            ></i>
+          </button>
+        </span>
+      </h2>
+      <p class="location">{{ employee.address }}</p>
+    </div>
+
+    <div class="profile-body">
+      <div class="row">
+        <div class="col">
+          <strong>Role:</strong>
+          <p>{{ employee.role }}</p>
+        </div>
+        <div class="col">
+          <strong>Date of Birth:</strong>
+          <p>{{ employee.date_of_birth | date : "shortDate" }}</p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <strong>Email:</strong>
+          <p>{{ employee.email }}</p>
+        </div>
+        <div class="col">
+          <strong>Phone Number:</strong>
+          <p>{{ employee.phone_number }}</p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <strong>Date of Joining:</strong>
+          <p>{{ employee.date_of_joining | date: "short"}}</p>
+        </div>
+        <div class="col">
+          <strong>Last Login:</strong>
+          <p>{{ employee.last_login | date : "short" }}</p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <strong>Years of Experience:</strong>
+          <p>{{ employee.experience }} years</p>
+        </div>
+        <div class="col">
+          <strong>Salary:</strong>
+          <p>{{ employee.salary | currency : "INR" }}</p>
+        </div>
+      </div>
+    </div>
+    <div class="profile-footer">
+      <button class="btn edit-btn" (click)="editEmployee(employee)">
+        Edit <i class="bi bi-pen"></i>
+      </button>
+    </div>
+  </div>
+</div>

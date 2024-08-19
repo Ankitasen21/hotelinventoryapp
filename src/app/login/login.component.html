@@ -1,0 +1,40 @@
+<div class="container d-flex justify-content-center align-items-center vh-100">
+  <div class="card box shadow p-3 mb-5 bg-white rounded" style="width: 22rem;">
+    <div class="card-body">
+      <form (ngSubmit)="login()">
+        <div class="form-group mb-3">
+          <label for="username"><i class="bi bi-person-fill"></i> Username</label>
+          <input
+            type="text"
+            class="form-control"
+            id="username"
+            [(ngModel)]="username"
+            name="username"
+            required
+          />
+        </div>
+        <div class="form-group mb-3 position-relative">
+          <label for="password"><i class="bi bi-lock-fill"></i> Password</label>
+          <input
+            type="password"
+            class="form-control"
+            id="password"
+            [(ngModel)]="password"
+            name="password"
+            required
+          />
+          <i 
+          class="bi bi-eye-fill position-relative" 
+          id="togglePassword"
+          (click)="togglePasswordVisibility()"
+          style="left: 16rem; bottom: 1.9rem; color: gray">
+          </i>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Login</button>
+      </form>
+      <div class="text-center mt-3">
+        <a href="/register">Don't have an account? Register here</a>
+      </div>
+    </div>
+  </div>
+</div>

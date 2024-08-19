@@ -1,0 +1,28 @@
+<h1 mat-dialog-title>Edit User</h1>
+<div mat-dialog-content class="dialog-content">
+  <mat-form-field appearance="fill" class="full-width">
+    <mat-label>Username</mat-label>
+    <input matInput [(ngModel)]="data.username" required>
+  </mat-form-field>
+  
+  <mat-form-field appearance="fill" class="full-width">
+    <mat-label>Role</mat-label>
+    <input matInput [(ngModel)]="data.role" placeholder="Enter custom role" required>
+  </mat-form-field>
+  
+  
+  <mat-form-field appearance="fill" class="full-width">
+    <mat-label>Password</mat-label>
+    <input matInput [(ngModel)]="data.password" required>
+  </mat-form-field>
+  
+  <mat-form-field appearance="fill" class="full-width">
+    <mat-label>Salary</mat-label>
+    <input matInput [(ngModel)]="data.salary" required>
+  </mat-form-field>
+</div>
+
+<div mat-dialog-actions class="dialog-actions">
+  <button mat-button (click)="onNoClick()">Cancel</button>
+  <button mat-raised-button [mat-dialog-close]="data" cdkFocusInitial color="primary">Save</button>
+</div>

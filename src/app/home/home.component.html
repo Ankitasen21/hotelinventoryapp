@@ -1,0 +1,251 @@
+<div>
+  <ul class="d-flex flex-column gap-2" style="list-style-type: none">
+    <li class="d-flex gap-2 align-items-center">
+      <button
+        type="button"
+        id="headerComponent"
+        name="headerComponent"
+        (click)="handleClick($event)"
+        class = "btn btn-outline-primary"
+      >
+        HeaderComponent: Displays the header of the application, including
+        navigation links.
+      </button>
+    </li>
+
+    <li class="d-flex gap-2 align-items-center">
+      <button
+        type="button"
+        id="footerComponent"
+        name="footerComponent"
+        (click)="handleClick($event)"
+        class = "btn btn-outline-primary"
+      >
+        FooterComponent: Displays the footer of the application.
+      </button>
+    </li>
+
+    <li class="d-flex gap-2 align-items-center">
+      <button
+        type="button"
+        id="homeComponent"
+        name="homeComponent"
+        (click)="handleClick($event)"
+        class = "btn btn-outline-primary"
+      >
+        HomeComponent: The landing page for the application, showcasing
+        highlights or important information.
+      </button>
+    </li>
+
+    <li class="d-flex gap-2 align-items-center">
+      <button
+        type="button"
+        id="roomListComponent"
+        name="roomListComponent"
+        (click)="handleClick($event)"
+        class = "btn btn-outline-primary"
+      >
+        RoomListComponent: Displays a list of available rooms with details such
+        as type, price, and availability.
+      </button>
+    </li>
+
+    <li class="d-flex gap-2 align-items-center">
+      <button
+        type="button"
+        id="roomDetailComponent"
+        name="roomDetailComponent"
+        (click)="handleClick($event)"
+        class = "btn btn-outline-primary"
+      >
+        RoomDetailComponent: Displays detailed information about a specific
+        room, including images, features, and booking options.
+      </button>
+    </li>
+
+    <li class="d-flex gap-2 align-items-center">
+      <button
+        type="button"
+        id="bookingComponent"
+        name="bookingComponent"
+        (click)="handleClick($event)"
+        class = "btn btn-outline-primary"
+      >
+        BookingComponent: Handles the booking process, including selecting
+        dates, guest information, and payment details.
+      </button>
+    </li>
+
+    <li class="d-flex gap-2 align-items-center">
+      <button
+        type="button"
+        id="bookingListComponent"
+        name="bookingListComponent"
+        (click)="handleClick($event)"
+        class = "btn btn-outline-primary"
+      >
+      BookingListComponent: Displays a list of current and past bookings for
+      the user.
+      </button>
+    </li>
+
+    <li class="d-flex gap-2 align-items-center">
+      <button
+        type="button"
+        id="loginComponent"
+        name="loginComponent"
+        (click)="handleClick($event)"
+        class = "btn btn-outline-primary"
+      >
+        
+      LoginComponent: Manages user authentication.
+      </button>
+    </li>
+
+    <li class="d-flex gap-2 align-items-center">
+      <button
+        type="button"
+        id="registerComponent"
+        name="registerComponent"
+        (click)="handleClick($event)"
+        class = "btn btn-outline-primary"
+      >
+      RegisterComponent: Manages user registration.
+      </button>
+    </li>
+
+    <li class="d-flex gap-2 align-items-center">
+      <button
+        type="button"
+        id="profileComponent"
+        name="profileComponent"
+        (click)="handleClick($event)"
+        class = "btn btn-outline-primary"
+      >
+      ProfileComponent: Allows users to view and edit their profile
+      information.
+      </button>
+    </li>
+
+    <li class="d-flex gap-2 align-items-center">
+      <button
+        type="button"
+        id="adminDashboardComponent"
+        name="adminDashboardComponent"
+        (click)="handleClick($event)"
+        class = "btn btn-outline-primary"
+      >
+        
+      AdminDashboardComponent: Provides an overview and management options
+      for administrators, including room inventory, bookings, and user management
+      </button>
+    </li>
+
+    <li class="d-flex gap-2 align-items-center">
+      <button
+        type="button"
+        id="addRoomComponent"
+        name="addRoomComponent"
+        (click)="handleClick($event)"
+        class = "btn btn-outline-primary"
+      >
+      AddRoomComponent: Allows administrators to add new rooms to the
+      inventory.
+      </button>
+    </li>
+
+    <li class="d-flex gap-2 align-items-center">
+      <button
+        type="button"
+        id="editRoomComponent"
+        name="editRoomComponent"
+        (click)="handleClick($event)"
+        class = "btn btn-outline-primary"
+      >
+      EditRoomComponent: Allows administrators to edit existing room
+      details.
+      </button>
+    </li>
+
+    <li class="d-flex gap-2 align-items-center">
+      <button
+        type="button"
+        id="searchComponent"
+        name="searchComponent"
+        (click)="handleClick($event)"
+        class = "btn btn-outline-primary"
+      >
+        
+      SearchComponent: Allows users to search for rooms based on various
+      criteria (e.g., date, room type, price).
+      </button>
+    </li>
+
+    <li class="d-flex gap-2 align-items-center">
+      <button
+        type="button"
+        id="notificationsComponent"
+        name="notificationsComponent"
+        (click)="handleClick($event)"
+        class = "btn btn-outline-primary"
+      >
+      NotificationsComponent: Displays notifications to users regarding
+      bookings, updates, and special offers.
+      </button>
+    </li>
+
+    <li class="d-flex gap-2 align-items-center">
+      <button
+        type="button"
+        id="errorComponent"
+        name="errorComponent"
+        (click)="handleClick($event)"
+        class = "btn btn-outline-primary"
+      >
+      ErrorComponent: Displays error messages for invalid routes or other
+      application errors.
+      </button>
+    </li>
+  </ul>
+</div>
+
+
+<div class="home">
+  <h1>Welcome to the Hotel Inventory App</h1>
+  <p>Here you can manage your hotel inventory and bookings.</p>
+  <div class="hotel-login">
+    <p style="text-align: center;">Are you an employee ? Login to the <a href="/login" style="text-decoration: none;">Employee Portal</a></p>
+  </div>
+  <div class="hotel-info">
+    <h2>About Our Hotel</h2>
+    <p>
+      Welcome to our luxurious hotel located in the heart of the city. With
+      stunning views, comfortable rooms, and exceptional service, we strive to
+      provide our guests with an unforgettable experience.
+    </p>
+  </div>
+
+  <div class="hotel-amenities">
+    <h2>Our Amenities</h2>
+    <ul>
+      <li>Swimming pool</li>
+      <li>Spa and wellness center</li>
+      <li>Fitness center</li>
+      <li>Restaurant and bar</li>
+      <li>Conference rooms</li>
+      <li>24-hour room service</li>
+    </ul>
+  </div>
+
+  <div class="hotel-rooms">
+    <h2>Our Rooms</h2>
+    <p>Choose from a variety of comfortable and stylish rooms:</p>
+    <ul>
+      <li>Standard Room</li>
+      <li>Deluxe Room</li>
+      <li>Suite</li>
+      <li>Penthouse</li>
+    </ul>
+  </div>
+</div>

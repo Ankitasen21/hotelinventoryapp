@@ -1,0 +1,84 @@
+<div class="home">
+<app-search (searchValueChanged)="onSearchValueChanged($event)" />
+<app-filter
+  [all]="getAllRooms()"
+  [available]="getAvailableRooms()"
+  [single]="getSingleRooms()"
+  [deluxe]="getDeluxeRooms()"
+  [suite]="getSuiteRooms()"
+  (filterOptionChanged)="onFilterRoomSelectionChanged($event)"
+  (radioButtonChanged)="onRadioButtonSelectionChanged($event)"
+  (priceRangeChanged)="onPriceRangeSelectionChanged($event)"
+/>
+
+<div class="page row mt-4">
+  <ng-container *ngFor="let item of rooms">
+    <div
+      class="col-sm-6 col-lg-4 col-xl-4"
+      *ngIf="
+        (selectedRoomOnFilterChange === 'All' ||
+          selectedRoomOnFilterChange === item.type) &&
+        (radioButtonSelected === 'All' ||
+          (radioButtonSelected === 'Available' && item.available)) &&
+        item.price >= priceRangeSelected[0] &&
+        item.price <= priceRangeSelected[1] &&
+        (searchValue === '' ||
+          item.facility.includes(searchValue) ||
+          item.name.includes(searchValue) ||
+          item.description.includes(searchValue))
+      "
+    >
+      <div
+        class="card mb-4"
+        [ngStyle]="{ color: item.available ? 'black' : 'grey' }"
+      >
+        <img [src]="item.image" class="cardImg card-img-top" alt="..." />
+        <div class="card-body">
+          <h5 class="card-title">{{ item.name }}</h5>
+          <p class="card-text">{{ item.description }}</p>
+          <p class="card-text">Price: ${{ item.price }}</p>
+          <div class="d-flex" style="font-size: 0.5rem; flex-wrap: wrap">
+             <p
+              class="card-text"
+              
+              style="
+                background-color: #f0f0f0;
+                padding: 0.2rem;
+                margin: 0.2rem;
+                border-radius: 0.5rem;
+              "
+            >
+              {{ item.facility }}
+            </p> 
+          </div>
+          <div class="d-flex">
+            <a
+              href="#"
+              class="btn btn-success m-2"
+              [ngStyle]="{ backgroundColor: item.available ? '' : 'grey' }"
+              [routerLink]="['/rooms',item.number]"
+              routerLinkActive="active">Show Details</a
+            >
+            <a
+              href="#"
+              class="btn btn-primary pt-3"
+              [ngStyle]="{ backgroundColor: item.available ? '' : 'grey' }"
+              *ngIf="item.available; else notify"
+              (click) = "selectedRoom = item"
+              >Book Now</a
+            >
+          </div>
+          <ng-template #notify>
+            <button class="btn btn-outline-secondary">
+              Notify
+              <i class="bi bi-bell"></i>
+            </button>
+          </ng-template>
+        </div>
+      </div>
+
+      
+    </div>
+  </ng-container>
+</div>
+</div>

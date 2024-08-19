@@ -1,0 +1,63 @@
+<div
+  class="container d-flex"
+  style="flex-direction: row; gap: 1rem; justify-content: center; font-size: 0.75em"
+>
+  <div class="row mt-2">
+    <div class="col">
+      <select class="form-select" 
+        [(ngModel)]="selectedRoom"
+        (change) = "onFilterOptionChange()"
+        style="font-size: x-small; width: fit-content;"
+      >
+        <option value="All" selected>All</option>
+        <option value="Single">Single</option>
+        <option value="Deluxe">Deluxe</option>
+        <option value="Suite">Suite</option>
+      </select>
+    </div>
+  </div>
+  <div class="row mt-2">
+    <div class="col">
+      <label for="minPrice" class="form-label">Min Price</label>
+      <input
+        type="range"
+        class="form-range"
+        min="0"
+        max="500"
+        step="10"
+        [(ngModel)]="minPrice"
+        (change)="onPriceRangeChange()"
+      />{{ minPrice }}
+    </div>
+    <div class="col">
+      <label for="maxPrice" class="form-label">Max Price</label>
+      <input
+        type="range"
+        class="form-range"
+        min="{{ minPrice }}"
+        max="500"
+        step="10"
+        [(ngModel)]="maxPrice"
+        (change)="onPriceRangeChange()"
+      />{{ maxPrice }}
+    </div>
+  </div>
+  <div class="row mt-2">
+    <div class="col">
+      <input
+        type="radio"
+        name="filter"
+        value="All"
+        [(ngModel)]="availableRoom"
+        (change) = "onRadioButtonChange()"
+      />All
+      <input
+        type="radio"
+        name="filter"
+        value="Available"
+        [(ngModel)]="availableRoom"
+        (change) = "onRadioButtonChange()"        
+      />Available
+    </div>
+  </div>
+</div>

@@ -1,0 +1,61 @@
+.room-page {
+  display: flex;
+  flex-direction: row;
+  color: white;
+  background-color: #5e7664;
+  padding: 20px;
+}
+
+.room-details {
+  width: 60%;
+  padding: 20px;
+}
+
+.benefits {
+  margin-top: 20px;
+}
+
+.benefits ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.benefits li {
+  margin: 10px 0;
+}
+
+.price h3 {
+  font-size: 24px;
+}
+
+.room-image {
+  width: 40%;
+}
+
+.room-image img {
+  width: 100%;
+  height: auto;
+}
+
+.room-navigation {
+  text-align: center;
+  padding: 0.25rem;
+  width: fit-content;
+  border-radius: 2rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  background-color: rgba(255, 255, 255, 0.103);
+}
+
+.testimonials {
+  width: 100%;
+  max-width: 1200px;
+  background-color: rgba(255, 255, 255, 0.103);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.testimonial {
+  margin-bottom: 20px;
+}

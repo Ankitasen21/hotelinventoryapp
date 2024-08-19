@@ -1,0 +1,73 @@
+.home {
+    text-align: center;
+    width: 100%;
+    padding: 2rem;
+    background: linear-gradient(to right, #ffecd2 0%, #fcb69f4e 100%);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.home h1 {
+    font-size: 2.5rem;
+    color: #444;
+}
+
+.home p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    color: #666;
+}
+.hotel-login,
+.hotel-info,
+.hotel-amenities,
+.hotel-rooms {
+    background: #fff;
+    padding: 1.5rem;
+    margin: 1rem auto;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.hotel-info h2,
+.hotel-amenities h2,
+.hotel-rooms h2 {
+    color: #f76c6c;
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+.hotel-login p,
+.hotel-info p,
+.hotel-amenities ul,
+.hotel-rooms ul {
+    font-size: 1rem;
+    color: #555;
+    text-align: left;
+}
+
+.hotel-amenities ul,
+.hotel-rooms ul {
+    list-style: none;
+    padding: 0;
+}
+
+.hotel-amenities li,
+.hotel-rooms li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #eee;
+}
+
+.hotel-amenities li:last-child,
+.hotel-rooms li:last-child {
+    border-bottom: none;
+}
+
+.hotel-amenities li::before,
+.hotel-rooms li::before {
+    content: "✔";
+    color: #f76c6c;
+    margin-right: 0.5rem;
+}
+
+.hotel-login a:hover{
+    color: #5500fffc;
+}
